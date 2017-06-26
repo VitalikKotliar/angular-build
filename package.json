@@ -1,0 +1,14 @@
+{
+  "name": "build-angular",
+  "version": "1.0.0",
+  "description": "Simple build using Angular 1.6, ES6, SCSS, Webpack",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^3.0.0"
+  }
+}
