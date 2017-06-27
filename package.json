@@ -4,11 +4,24 @@
   "description": "Simple build using Angular 1.6, ES6, SCSS, Webpack",
   "main": "index.js",
   "scripts": {
-    "start": "webpack"
+    "start": "SET DEV=false && npm-run-all build server",
+    "dev": "SET DEV=true && npm-run-all server",
+    "build": "webpack",
+    "server": "node server"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^3.0.0"
+    "dotenv": "^4.0.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.29.0",
+    "npm-run-all": "^4.0.2",
+    "webpack": "^3.0.0",
+    "webpack-dev-middleware": "^1.11.0",
+    "webpack-merge": "^4.1.0"
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "path": "^0.12.7"
   }
 }
