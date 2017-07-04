@@ -3,9 +3,14 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 module.exports = {
-    isDev
+    isDev,
+    get
 };
 
 function isDev() {
-    return process.env.DEV.trim() === 'true';
+    return get('DEV') === 'true';
+}
+
+function get(property) {
+    return process.env[property].trim();
 }

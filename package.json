@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "SET DEV=false && npm-run-all build server",
-    "dev": "SET DEV=true && npm-run-all server",
+    "dev": "SET DEV=true && npm-run-all server-live",
     "build": "webpack",
-    "server": "node server"
+    "server": "node server",
+    "server-live": "nodemon server --watch server"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "dotenv": "^4.0.0",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.29.0",
+    "nodemon": "^1.11.0",
     "npm-run-all": "^4.0.2",
     "webpack": "^3.0.0",
     "webpack-dev-middleware": "^1.11.0",
