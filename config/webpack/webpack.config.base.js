@@ -13,10 +13,17 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+                query: {
+                    cacheDirectory: true,
+                    presets: ['es2015']
+                }
+            },
+            {
                 test: /\.(png|svg|jpg|gif)$/,
-                use: [
-                    'file-loader'
-                ]
+                loader: 'file-loader'
             }
         ]
     },
