@@ -9,6 +9,7 @@ module.exports = {
     },
     output: {
         path: path.join(root, '/dist'),
-        filename: '[name].bundle.js'
+        filename: '[name].bundle.js',
+        cssName: 'styles.css'
     }
 };

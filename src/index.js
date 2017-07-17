@@ -1,3 +1,4 @@
+import './index.scss';
 import image from './assets/images/test.png';
 
 var $test = document.getElementById('test');
