@@ -6,7 +6,7 @@ const envHelper = require('../config/env.helper');
 const app = express();
 
 if (envHelper.isDev()) {
-    require('../config/webpack/webpack.devMiddleware')(app);
+    require('../config/webpack/webpack.devMiddleware')(app); // eslint-disable-line
 } else {
     app.use('/', express.static(paths.output.path));
 }
@@ -14,5 +14,5 @@ if (envHelper.isDev()) {
 const port = envHelper.get('PORT');
 
 app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
+    console.log(`Listening on port ${port}`); // eslint-disable-line
 });

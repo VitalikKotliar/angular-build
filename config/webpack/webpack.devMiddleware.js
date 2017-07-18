@@ -1,5 +1,5 @@
-const webpack = require('webpack');
-const webpackDevMiddleware = require('webpack-dev-middleware');
+const webpack = require('webpack'); // eslint-disable-line
+const webpackDevMiddleware = require('webpack-dev-middleware'); // eslint-disable-line
 const webpackConfig = require('../../webpack.config');
 
 module.exports = (app) => {
